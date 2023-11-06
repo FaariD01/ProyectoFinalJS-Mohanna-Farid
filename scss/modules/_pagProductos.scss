@@ -1,0 +1,32 @@
+@import "./mixins";
+@import "./variables";
+
+#mainPagProductos{
+    
+    
+    #materiales, #materiales2{
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        a{
+            @include reseteo-links;
+            color: $colorPrincipal;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #f7951d46;
+                width: 25vh;
+                height: 30vh;
+                border-radius: 2vh;
+                
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+    }
+        
+    }

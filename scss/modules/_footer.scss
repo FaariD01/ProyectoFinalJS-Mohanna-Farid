@@ -1,0 +1,28 @@
+@import "./variables";
+@import "./mixins";
+
+footer{
+    background-color: $colorPrincipal;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    
+    p{
+        color: white;
+    }
+}
+
+@media (max-width: 340px){
+    footer{
+        font-size: .7rem;
+    }
+}
+
+
+@media (max-width: 540px){
+    footer{
+        height: 19vh;
+    }
+}

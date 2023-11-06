@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./mixins";
+
+header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid $colorPrincipal;
+    #logo{
+       width: 25vh;
+    }
+    #botoneraNav{
+       display: flex;
+       align-items: center;
+ 
+       a{
+          @include reseteo-links;
+          margin-left: 2vh;
+          color: $colorPrincipal;
+          &:hover{
+             color: $colorSecundario;
+          }
+       }
+    }
+ 
+}

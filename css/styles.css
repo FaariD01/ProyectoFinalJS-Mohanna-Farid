@@ -1,0 +1,261 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  background-color: #ffffff;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 3fr 3fr 0.2fr;
+  grid-template-areas: "header header header" "main main main" "main main main" "footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: gold;
+}
+
+#mainPagPrincipal #bannerPagPrincipal {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #2f2c33;
+}
+#mainPagPrincipal #bannerPagPrincipal h2 {
+  font-weight: 400;
+}
+#mainPagPrincipal #btnAccesosRapidos {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#mainPagPrincipal #btnAccesosRapidos a {
+  text-decoration: none;
+  color: #2f2c33;
+}
+#mainPagPrincipal #btnAccesosRapidos a div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(247, 149, 29, 0.2745098039);
+  width: 25vh;
+  height: 30vh;
+  border-radius: 2vh;
+}
+#mainPagPrincipal #btnAccesosRapidos a div img {
+  width: 10vh;
+}
+#mainPagPrincipal #btnAccesosRapidos a div h2 {
+  font-weight: 300;
+}
+#mainPagPrincipal #textoEntregaInmediata {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+#mainPagPrincipal #textoEntregaInmediata h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+#mainPagPrincipal #ubicacion {
+  display: flex;
+  justify-content: center;
+}
+#mainPagPrincipal #ubicacion iframe {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #2f2c33;
+}
+header #logo {
+  width: 25vh;
+}
+header #botoneraNav {
+  display: flex;
+  align-items: center;
+}
+header #botoneraNav a {
+  text-decoration: none;
+  margin-left: 2vh;
+  color: #2f2c33;
+}
+header #botoneraNav a:hover {
+  color: rgba(247, 149, 29, 0.4431372549);
+}
+
+footer {
+  background-color: #2f2c33;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+}
+footer p {
+  color: white;
+}
+
+@media (max-width: 340px) {
+  footer {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 540px) {
+  footer {
+    height: 19vh;
+  }
+}
+#mainPagProductos #materiales, #mainPagProductos #materiales2 {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#mainPagProductos #materiales a, #mainPagProductos #materiales2 a {
+  text-decoration: none;
+  color: #2f2c33;
+}
+#mainPagProductos #materiales a div, #mainPagProductos #materiales2 a div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(247, 149, 29, 0.2745098039);
+  width: 25vh;
+  height: 30vh;
+  border-radius: 2vh;
+}
+#mainPagProductos #materiales a div h2, #mainPagProductos #materiales2 a div h2 {
+  text-align: center;
+}
+
+#mainMatConstru #tituloPagMatConstru {
+  text-align: center;
+  font-weight: 300;
+}
+#mainMatConstru #materialesMezcla {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#mainMatConstru #materialesMezcla a {
+  text-decoration: none;
+  color: #2f2c33;
+}
+#mainMatConstru #materialesMezcla a div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(247, 149, 29, 0.2745098039);
+  width: 25vh;
+  height: 30vh;
+  border-radius: 2vh;
+}
+#mainMatConstru #materialesMezcla a div h2 {
+  font-weight: 300;
+}
+
+#mainCompraProd #tituloProd {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2f2c33;
+}
+#mainCompraProd #infoProd {
+  display: flex;
+  justify-content: space-evenly;
+}
+#mainCompraProd #infoProd .infoProdPrimeraCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#mainCompraProd #infoProd .infoProdPrimeraCol div img {
+  width: 40vh;
+}
+#mainCompraProd #infoProd .infoProdPrimeraCol .titulosDesc {
+  display: flex;
+}
+#mainCompraProd #infoProd .infoProdPrimeraCol .titulosDesc p {
+  margin-left: 3vh;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+#mainCompraProd #infoProd .infoProdPrimeraCol .detalleDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#mainCompraProd #infoProd .infoProdPrimeraCol .detalleDesc p {
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol {
+  border-left: 1px solid rgba(47, 44, 51, 0.4392156863);
+  padding-left: 10vh;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol #marca {
+  font-weight: 500;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol #tituloProdDetalle {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol #codProd {
+  font-weight: 200;
+  font-size: 0.8rem;
+  color: rgba(47, 44, 51, 0.4392156863);
+}
+#mainCompraProd #infoProd .infoProdSegundaCol #precio {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol .btnComprarProd a button {
+  width: 40vh;
+  height: 5vh;
+  border-radius: 2vh;
+  margin-bottom: 2vh;
+  background-color: rgba(247, 149, 29, 0.4431372549);
+  color: #2f2c33;
+  border: 0px;
+  font-weight: 700;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol div {
+  display: flex;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios {
+  text-decoration: none;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar {
+  background-color: #ffffff;
+  margin-left: 2vh;
+  border: 1px solid #2f2c33;
+  border-radius: 1vh;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar img {
+  width: 4vh;
+  margin-right: 1vh;
+  padding-left: 2vh;
+}
+#mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar p {
+  font-size: 1.2rem;
+  color: #2f2c33;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=styles.css.map */

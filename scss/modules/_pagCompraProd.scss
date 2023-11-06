@@ -1,0 +1,114 @@
+@import "./variables";
+@import "./mixins";
+
+#mainCompraProd{
+    
+    #tituloProd{
+        text-align: center;
+        font-size: 2.5rem;
+        color: $colorPrincipal;
+    }
+    #infoProd{
+        display: flex;
+        justify-content: space-evenly;
+
+        .infoProdPrimeraCol{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            
+            div{
+                img{
+                    width: 40vh;
+                }
+            }
+            .titulosDesc{
+                display: flex;
+                
+                p{
+                    margin-left: 3vh;
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                }
+            }
+            .detalleDesc{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                p{
+                    text-decoration: underline;
+                    font-size: 1.1rem;
+                }
+                h2{
+    
+                }
+            }
+        }
+        .infoProdSegundaCol{
+
+            border-left: 1px solid #2f2c3370;
+            padding-left: 10vh;
+            #marca{
+                font-weight: 500;
+
+            }
+            #tituloProdDetalle{
+                font-weight: 500;
+                font-size: 1.3rem;
+            }
+            #codProd{
+                font-weight: 200;
+                font-size: .8rem;
+                color: #2f2c3370;
+            }
+            #precio{
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            .btnComprarProd{
+                
+                a{
+                    button{
+                        width: 40vh;
+                        height: 5vh;
+                        border-radius: 2vh;
+                        margin-bottom: 2vh;
+                        background-color: $colorSecundario;
+                        color: $colorPrincipal;
+                        border: 0px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            div{
+                display: flex;
+                #secBtnEnvios{
+                    @include reseteo-links;
+                    .btnSecComprar{
+                        background-color: #ffffff;
+                        margin-left: 2vh;
+                        border: 1px solid $colorPrincipal;
+                        border-radius: 1vh;
+                        
+                        img{
+                            width: 4vh;
+                            margin-right: 1vh;
+                            padding-left: 2vh;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            color: $colorPrincipal;
+                            font-weight: 600;
+                        }
+                       
+                    }
+        
+                }
+            }
+            
+        }
+    }
+    
+}

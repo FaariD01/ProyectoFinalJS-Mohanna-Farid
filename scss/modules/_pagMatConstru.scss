@@ -1,0 +1,34 @@
+@import "./mixins";
+@import "./variables";
+
+#mainMatConstru{
+    
+    #tituloPagMatConstru{
+    text-align: center;
+    font-weight: 300;
+    }
+    #materialesMezcla{
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        a{ @include reseteo-links;
+            color: $colorPrincipal;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #f7951d46;
+                width: 25vh;
+                height: 30vh;
+                border-radius: 2vh;
+                
+                h2{
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
