@@ -12,20 +12,24 @@ function comprar_producto(){
     do{
         precio_final_producto = precio_incial_producto;
 
-//PREGUNTO RESPUESTA POR ENVIO
-
-        retiraEnSucursal = prompt("Quieres retirar el producto por la sucursal? (SI / NO)").toLowerCase();
-
-        if(retiraEnSucursal === "no"){
-                
-            precio_final_producto = precio_incial_producto + envio;
+//PREGUNTO Y VALIDO RESPUESTA POR ENVIO
+        
+        do{
+            retiraEnSucursal = prompt("Quieres retirar el producto por la sucursal? (SI / NO)").toLowerCase();
             
+        }while (retiraEnSucursal !== "si" && retiraEnSucursal !== "no");
+        
+        if(retiraEnSucursal === "no"){
+            precio_final_producto = precio_incial_producto + envio; 
         }
 
-//PREGUNTO POR METODO DE PAGO
-            
-        pago = prompt("Como vas a abonar? (EFECTIVO / TRANSFERENCIA)").toLowerCase();
+//PREGUNTO Y VALIDO POR METODO DE PAGO
+        
+        do{
+            pago = prompt("Como vas a abonar? (EFECTIVO / TRANSFERENCIA)").toLowerCase();
 
+        }while(pago !== "efectivo" && pago !== "transferencia");
+        
         if(pago === "transferencia"){
             precio_final_producto = (precio_final_producto * 0.10) + precio_final_producto;
         }
@@ -35,9 +39,12 @@ function comprar_producto(){
 
         
 
-//PREGUNTO SI QUIERE FACTURA
+//PREGUNTO Y VALIDO SI QUIERE FACTURA
 
-        facturacion = prompt("Queres factura? (SI / NO)").toLowerCase();
+        do{
+            facturacion = prompt("Queres factura? (SI / NO)").toLowerCase();
+
+        }while(facturacion !== "si" && facturacion !== "no")
 
         if(facturacion === "si"){
              precio_final_producto = (precio_final_producto * 0.21) + precio_final_producto;
