@@ -132,13 +132,17 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(247, 149, 29, 0.2745098039);
+  box-shadow: 10px 10px 20px;
   width: 25vh;
-  height: 30vh;
+  height: 35vh;
   border-radius: 2vh;
 }
 #mainPagProductos #materiales a div h2, #mainPagProductos #materiales2 a div h2 {
   text-align: center;
+  font-weight: 400;
+}
+#mainPagProductos #materiales a div img, #mainPagProductos #materiales2 a div img {
+  width: 25vh;
 }
 
 #mainMatConstru #tituloPagMatConstru {
@@ -161,13 +165,17 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(247, 149, 29, 0.2745098039);
+  padding: 3vh 0 3vh 0;
   width: 25vh;
   height: 30vh;
   border-radius: 2vh;
+  box-shadow: 10px 10px 20px;
 }
 #mainMatConstru #materialesMezcla a div h2 {
   font-weight: 300;
+}
+#mainMatConstru #materialesMezcla a div img {
+  width: 20vh;
 }
 
 #mainCompraProd #tituloProd {
@@ -234,6 +242,7 @@ footer p {
   color: #2f2c33;
   border: 0px;
   font-weight: 700;
+  box-shadow: 10px 10px 15px;
 }
 #mainCompraProd #infoProd .infoProdSegundaCol div {
   display: flex;
@@ -244,7 +253,7 @@ footer p {
 #mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar {
   background-color: #ffffff;
   margin-left: 2vh;
-  border: 1px solid #2f2c33;
+  border: 3px solid #2f2c33;
   border-radius: 1vh;
 }
 #mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar img {

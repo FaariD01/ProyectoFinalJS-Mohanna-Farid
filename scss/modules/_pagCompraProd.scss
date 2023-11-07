@@ -41,9 +41,7 @@
                     text-decoration: underline;
                     font-size: 1.1rem;
                 }
-                h2{
-    
-                }
+                
             }
         }
         .infoProdSegundaCol{
@@ -79,6 +77,7 @@
                         color: $colorPrincipal;
                         border: 0px;
                         font-weight: 700;
+                        box-shadow: 10px 10px 15px;
                     }
                 }
             }
@@ -89,8 +88,10 @@
                     .btnSecComprar{
                         background-color: #ffffff;
                         margin-left: 2vh;
-                        border: 1px solid $colorPrincipal;
+                        border: 3px solid $colorPrincipal;
                         border-radius: 1vh;
+                        
+                        
                         
                         img{
                             width: 4vh;

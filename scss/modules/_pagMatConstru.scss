@@ -20,13 +20,18 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background-color: #f7951d46;
+                
+                padding: 3vh 0 3vh 0;
                 width: 25vh;
                 height: 30vh;
                 border-radius: 2vh;
+                box-shadow: 10px 10px 20px;
                 
                 h2{
                     font-weight: 300;
+                }
+                img{
+                    width: 20vh;
                 }
             }
         }

@@ -17,13 +17,18 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background-color: #f7951d46;
+                box-shadow: 10px 10px 20px;
                 width: 25vh;
-                height: 30vh;
+                height: 35vh;
                 border-radius: 2vh;
                 
                 h2{
                     text-align: center;
+                    font-weight: 400;
+                }
+                img{
+                    width: 25vh;
+                    
                 }
             }
         }
