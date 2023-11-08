@@ -252,9 +252,10 @@ footer p {
 }
 #mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar {
   background-color: #ffffff;
-  margin-left: 2vh;
   border: 3px solid #2f2c33;
   border-radius: 1vh;
+  margin-bottom: 2vh;
+  width: 40vh;
 }
 #mainCompraProd #infoProd .infoProdSegundaCol div #secBtnEnvios .btnSecComprar img {
   width: 4vh;
