@@ -90,7 +90,7 @@ function comprar_producto(){
 
 
     //PRINTEO EN CONSOLA PRECIO FINAL DEL PRODUCTO
-    console.log("~El precio final es: " + precio_final_producto);
+    console.log("~El precio final es: $" + precio_final_producto);
     
 }
 

@@ -117,32 +117,34 @@ footer p {
     height: 19vh;
   }
 }
-#mainPagProductos #materiales, #mainPagProductos #materiales2 {
+#mainPagProductos .materiales {
   margin-top: 10vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
 }
-#mainPagProductos #materiales a, #mainPagProductos #materiales2 a {
+#mainPagProductos .materiales a {
   text-decoration: none;
   color: #2f2c33;
 }
-#mainPagProductos #materiales a div, #mainPagProductos #materiales2 a div {
+#mainPagProductos .materiales a div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 10px 10px 20px;
-  width: 25vh;
-  height: 35vh;
+  width: 100%;
+  height: 50vh;
   border-radius: 2vh;
+  text-shadow: black 5px 10px 15px;
 }
-#mainPagProductos #materiales a div h2, #mainPagProductos #materiales2 a div h2 {
+#mainPagProductos .materiales a div h2 {
   text-align: center;
   font-weight: 400;
 }
-#mainPagProductos #materiales a div img, #mainPagProductos #materiales2 a div img {
-  width: 25vh;
+#mainPagProductos .materiales a div img {
+  width: 100vh;
+  height: 40vh;
+  border: solid rgba(247, 149, 29, 0.4431372549) 3px;
 }
 
 #mainMatConstru #tituloPagMatConstru {
