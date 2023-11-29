@@ -1,14 +1,15 @@
-const NOMBRE_PRODUCTO1 = "Cemento Avellaneda x 50Kg";
-let precio_incial_producto = 3500;
-let envio = 1000;
-let precio_final_producto;
-let retiraEnSucursal;
-let pago;
-let seguirComprando;
-let facturacion;
 
 function comprar_producto(){
-    
+    let nombreProd = "Cemento Avellaneda 50KG"    
+    let precio_incial_producto = 5000;
+    const ENVIO = 1000;
+    let precio_final_producto;
+    let retiraEnSucursal;
+    let pago;
+    let seguirComprando;
+    let facturacion;
+
+
     do{
         precio_final_producto = precio_incial_producto;
 
@@ -20,7 +21,7 @@ function comprar_producto(){
         }while (retiraEnSucursal !== "si" && retiraEnSucursal !== "no");
         
         if(retiraEnSucursal === "no"){
-            precio_final_producto = precio_incial_producto + envio; 
+            precio_final_producto = precio_incial_producto + ENVIO; 
         }
 
 //PREGUNTO Y VALIDO POR METODO DE PAGO
@@ -61,12 +62,12 @@ function comprar_producto(){
 
 
 //PRINTEO EN CONSOLA NOMBRE DEL PRODUCTO + PRECIO INICIAL
-    console.log("¡¡¡Felicidades, compraste " + NOMBRE_PRODUCTO1 + " " + "el precio inicial es $" + precio_incial_producto + "!!!");
+    console.log("¡¡¡Felicidades, compraste " + nombreProd + " " + "el precio inicial es $" + precio_incial_producto + "!!!");
 
 
     //PRINTEO EN CONSOLA ENVIO
     if(retiraEnSucursal === "no"){
-        console.log("~Decidiste que te lo llevemos a traves de envio, el costo del servicio es de $" + envio);
+        console.log("~Decidiste que te lo llevemos a traves de envio, el costo del servicio es de $" + ENVIO);
     }
     else{
         console.log("~Decidiste pasar a retirarlo por la sucursal, no hay recargo por envio");
@@ -91,7 +92,9 @@ function comprar_producto(){
 
     //PRINTEO EN CONSOLA PRECIO FINAL DEL PRODUCTO
     console.log("~El precio final es: $" + precio_final_producto);
-    
+
+
+
 }
 
 

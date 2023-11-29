@@ -15,13 +15,13 @@ const FERRETERIA = new TipoProductos("#","../assets/fotosTiposMateriales/ferrete
 const CONSTRUCCION_EN_SECO = new TipoProductos("#","../assets/fotosTiposMateriales/construEnSeco.jpg", "CONSTRUCCION EN SECO");
 
 
-const ARRAY_PRODUCTOS = [MATERIALES_PARA_CONSTRUCCION, PLOMERIA, PINTURA, FERRETERIA,CONSTRUCCION_EN_SECO]
+const ARRAY_TIPO_PRODUCTOS = [MATERIALES_PARA_CONSTRUCCION, PLOMERIA, PINTURA, FERRETERIA,CONSTRUCCION_EN_SECO]
 
 
-ARRAY_PRODUCTOS.forEach(producto =>{
-    let section = document.createElement("section");
-    section.className = "materiales"; //Aplico una Class
-    section.innerHTML = `
+ARRAY_TIPO_PRODUCTOS.forEach(producto =>{
+    let div = document.createElement("div");
+    div.className = "materiales"; //Aplico una Class
+    div.innerHTML = `
                         
                         
                         <a href="${producto.link}">
@@ -34,5 +34,6 @@ ARRAY_PRODUCTOS.forEach(producto =>{
     
     
     `
-    materiales.appendChild(section); //Inyecto en el HTML la etiqueta que declare
+    materiales.appendChild(div); //Inyecto en el HTML la etiqueta que declare
 });
+
