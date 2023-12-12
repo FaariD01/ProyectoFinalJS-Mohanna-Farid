@@ -30,7 +30,7 @@ LISTADO_PRODUCTOS_MAT_CONSTRUCCION.forEach(producto =>{
     div.className = "matConstru";
     div.innerHTML = `
                     <a href="${producto.link}">
-                        <div >                        
+                        <div>                        
                             <img src="${producto.img}" alt="Foto Producto">
                             <h2>${producto.nombre}</h2>
                             <p>Precio: $${producto.precio}</p>

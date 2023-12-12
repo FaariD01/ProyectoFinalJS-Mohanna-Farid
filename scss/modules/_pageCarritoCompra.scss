@@ -1,0 +1,51 @@
+@import "./variables";
+@import "./mixins";
+
+
+#mainCarrito{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vh;
+    align-items: center;
+    #tituloPageCarrito{
+        font-weight: 400;
+        justify-content: start;
+    }
+    #btnSeguirComprando{
+        align-items: center;
+        margin-top: 10vh;
+        button{
+            background-color: $colorSecundario;
+            border: none;
+            border-radius: 5px;
+            height: 4vh;
+            width: 20vh;
+            box-shadow: 2px 5px 10px $colorPrincipal;
+        }
+    }
+    #prodEnCarrito{
+        
+        div{
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid $colorPrincipal;
+                margin-bottom: 2vh;
+                padding: 1vh 1vh 1vh 1vh;
+                border-radius: 10px;
+                img{
+                    width: 15vh;
+                }
+                button{
+                    border: none;
+                
+                    
+                    img{
+                        width: 2vh;
+                    }
+                }
+            }
+        }
+    }
+}

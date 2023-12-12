@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Viena - Materiales para la Construccion</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER PAGINA PRINCIPAL -->
+    <header>
+      <!-- LOGO -->
+      <a href="../index.html"
+        ><img id="logo" src="../assets/logo.webp" alt="Logo Empresa"
+      /></a>
+      <!-- BOTONERA NAVEGACION GLOBAL -->
+      <div id="botoneraNav">
+        <a href="../index.html" id="btnInicio">Inicio</a>
+        <a href="./pagesProductos.html" id="btnProductos">Productos</a>
+        <a href="./pagesContacto.html" id="btnContacto">Contacto</a>
+        <a href="#" id="btnNosotros">¿Quienes Somos?</a>
+      </div>
+      <div id="carritoYbuttonDarkMode">
+        <a href="#"
+          ><img
+            src="../assets/icons/carritoCompra.svg"
+            alt="Foto Carrito Compra"
+        /></a>
+        <label class="switch">
+          <input id="botonModo" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    <!-- MAIN DE LA PAGINA DE MATERIALES PARA CONSTRUCCION -->
+    <main id="mainPageFormularioContacto">
+      <section id="infoContacto">
+        <h2>
+          Te dejamos nuestros datos para que puedas contactarte con nosotros
+        </h2>
+        <div id="whatsApp">
+          <img src="../assets/icons/whatsappVerde.svg" alt="Logo WhatsApp" />
+          <p>WhatsApp:</p>
+          <p>+54 9 11 1234-1234</p>
+        </div>
+        <div id="telefonoFijo">
+          <img src="../assets/icons/telFijo.svg" alt="Logo WhatsApp" />
+          <p>Telefono Fijo:</p>
+          <p>9876-9876</p>
+        </div>
+        <div id="email">
+          <img src="../assets/icons/email.svg" alt="Logo WhatsApp" />
+          <p>E-mail</p>
+          <p>materiales@casaviena.com.ar</p>
+        </div>
+      </section>
+      <section id="formulario">
+        <h2 id="tituloFormulario">
+          ¡O bien podes cargar tus datos y te llamamos!
+        </h2>
+        <p id="subtituloFormulario">
+          Completá el formulario con tus datos y uno de nuestros representantes
+          te va a contactar a la brevedad
+        </p>
+        <div id="formularioCuerpo">
+          <form>
+            <label for="nombre"></label>
+            <input type="text" id="nombre" placeholder="Nombre" />
+
+            <label for="apellido"></label>
+            <input type="text" id="apellido" placeholder="Apellido" />
+
+            <label for="e-mail"></label>
+            <input type="text" id="e-mail" placeholder="E-mail" />
+            <fieldset>
+              <legend>Tipo de telefono</legend>
+              <label for="tipoContactoMovil"></label>
+              <select name="" id="tipoContactoMovil">
+                <option value="Celular">Celular</option>
+                <option value="Telefono Fijo">Telefono Fijo</option>
+              </select>
+            </fieldset>
+            <fieldset id="datosCelular">
+              <legend>Cod. de area</legend>
+              <label for="codArea"></label>
+              <select name="" id="codArea">
+                <option value="">011</option>
+                <option value="">0220</option>
+                <option value="">0221</option>
+                <option value="">0230</option>
+                <option value="">0237</option>
+                <option value="">0348</option>
+                <option value="">02202</option>
+              </select>
+              <p>15</p>
+              <input type="text" placeholder="Numero de Celular" />
+            </fieldset>
+
+            <button>SOLICITAR CONTACTO</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <p>Copyright © 2023 - Casa Viena</p>
+      <p>Hecho por Farid Mohanna</p>
+    </footer>
+    <script src="../js/funciones.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+@import "./variables";
+@import "./mixins";
+
+#mainPageFormularioContacto{
+    margin: 10vh 5vh 0 5vh;
+    display: flex;
+    color: $colorPrincipal;
+    #infoContacto{
+        
+        div{   
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-weight: 500;
+                
+            }
+            img{
+                width: 5vh;
+            }
+        }
+    }
+
+    #formulario{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-left: 2px solid $colorPrincipal;
+        margin: 0 2vh 5vh 2vh;
+        border-radius: 3px;
+        
+        
+        h2{
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 0 2vh 0 2vh;
+        }
+        p{
+            text-align: center;
+            font-size: 1.2rem ;
+        }
+        #formularioCuerpo{
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 90vh;
+                margin-bottom: 7vh;
+                
+                input{
+                    height: 3vh;
+                    margin: 1vh 0 1vh 0;
+                }
+                select{
+                    width: 70vh;
+                }
+                #datosCelular{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    height: 7vh;
+                    
+                    select{
+                        width: 20vh;
+                        height: 3vh;
+                    }
+                    input{
+                        width: 25vh;
+                    }
+                }
+                button{
+                    margin-top: 2vh;
+                    height: 5vh;
+                    width: 20vh;
+                    background-color: rgb(10, 214, 10);
+                    color: white;
+                    border: none;
+                    border-radius: 20px;
+                    font-weight: 700;
+                    
+                }
+            }
+        }
+    }
+}

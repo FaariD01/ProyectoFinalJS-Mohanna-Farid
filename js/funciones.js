@@ -97,5 +97,62 @@ function comprar_producto(){
 
 }
 
+const botonModo = document.getElementById("botonModo");
+
+botonModo.addEventListener("click", ()=> {
+    document.body.classList.toggle("dark");
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("modo","dark");
+    }else {
+        localStorage.setItem("modo","claro");
+    }
+})
+
+const PRODUCTOS_EN_CARRITO = [];
+
+class Producto{
+    constructor(img,nombre, precio){
+        this.img = img;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+}
+
+const prod1 = new Producto ("../assets/fotosProductos/cemento.webp","Cemento Avellaneda", 5000);
+const prod2 = new Producto ("../assets/fotosProductos/cal_el_milagro.jpg","Cal El Milagro", 3000);
+
+PRODUCTOS_EN_CARRITO.push(prod1);
+PRODUCTOS_EN_CARRITO.push(prod2);
+
+if(PRODUCTOS_EN_CARRITO.length == 0){
+    
+        let div = document.createElement("div");
+        div.className = "prodEnCarrito";
+        div.innerHTML = `
+                        <p>No hay elementos en el carrito</p>
+                        `
+    
+    prodEnCarrito.appendChild(div);
+    
+}else{
+    PRODUCTOS_EN_CARRITO.forEach(producto => {
+
+        let div = document.createElement("div");
+        div.className = "prodEnCarrito"; //Aplico una Class
+        div.innerHTML = `
+                            
+                            <div>
+                                <img src="${producto.img}" alt="Foto Prod">
+                                <h2>${producto.nombre}</h2>
+                                <p>$${producto.precio}</p>
+                                <button id="btnBorrarProd">Eliminar</button>
+                            </div>
+                            
+        
+        `
+        prodEnCarrito.appendChild(div);
+    })
+}
+
 
 

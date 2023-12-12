@@ -10,7 +10,6 @@ header{
     z-index: 100;
     background-color: white;
     
-    
     #logo{
        width: 25vh;
     }
@@ -27,5 +26,16 @@ header{
           }
        }
     }
- 
+    #carritoYbuttonDarkMode{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      a{
+         margin-right: 2vh;
+         img{
+            width: 5vh;
+         }
+      }
+    }
 }
