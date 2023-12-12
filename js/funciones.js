@@ -108,7 +108,13 @@ botonModo.addEventListener("click", ()=> {
     }
 })
 
+//Carrito de compras
+
+//Creo el array
+
 const PRODUCTOS_EN_CARRITO = [];
+
+//Creo la clase
 
 class Producto{
     constructor(img,nombre, precio){
@@ -118,11 +124,17 @@ class Producto{
     }
 }
 
+//Creo dos productos
+
 const prod1 = new Producto ("../assets/fotosProductos/cemento.webp","Cemento Avellaneda", 5000);
 const prod2 = new Producto ("../assets/fotosProductos/cal_el_milagro.jpg","Cal El Milagro", 3000);
 
+//Los agrego al array
+
 PRODUCTOS_EN_CARRITO.push(prod1);
 PRODUCTOS_EN_CARRITO.push(prod2);
+
+//Verifico si el array tiene productos, para mostrarlos. Si no tiene muestra "No hay elementos en el carrito"
 
 if(PRODUCTOS_EN_CARRITO.length == 0){
     
@@ -134,7 +146,7 @@ if(PRODUCTOS_EN_CARRITO.length == 0){
     
     prodEnCarrito.appendChild(div);
     
-}else{
+}else{                                          //Muestro los productos cargados
     PRODUCTOS_EN_CARRITO.forEach(producto => {
 
         let div = document.createElement("div");
@@ -145,7 +157,7 @@ if(PRODUCTOS_EN_CARRITO.length == 0){
                                 <img src="${producto.img}" alt="Foto Prod">
                                 <h2>${producto.nombre}</h2>
                                 <p>$${producto.precio}</p>
-                                <button id="btnBorrarProd">Eliminar</button>
+                                <button>Eliminar</button>
                             </div>
                             
         
