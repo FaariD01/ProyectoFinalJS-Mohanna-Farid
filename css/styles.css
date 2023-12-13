@@ -342,7 +342,7 @@ footer p {
   font-size: 1.5rem;
   font-weight: 600;
 }
-#mainCompraProd #infoProd .infoProdSegundaCol .btnComprarProd a button {
+#mainCompraProd #infoProd .infoProdSegundaCol .btnComprarProd button {
   width: 40vh;
   height: 5vh;
   border-radius: 2vh;
@@ -483,12 +483,6 @@ footer p {
 }
 #mainCarrito #prodEnCarrito div div img {
   width: 15vh;
-}
-#mainCarrito #prodEnCarrito div div button {
-  border: none;
-}
-#mainCarrito #prodEnCarrito div div button img {
-  width: 2vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

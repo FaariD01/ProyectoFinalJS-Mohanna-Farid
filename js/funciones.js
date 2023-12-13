@@ -136,17 +136,8 @@ PRODUCTOS_EN_CARRITO.push(prod2);
 
 //Verifico si el array tiene productos, para mostrarlos. Si no tiene muestra "No hay elementos en el carrito"
 
-if(PRODUCTOS_EN_CARRITO.length == 0){
-    
-        let div = document.createElement("div");
-        div.className = "prodEnCarrito";
-        div.innerHTML = `
-                        <p>No hay elementos en el carrito</p>
-                        `
-    
-    prodEnCarrito.appendChild(div);
-    
-}else{                                          //Muestro los productos cargados
+if(PRODUCTOS_EN_CARRITO.length > 0){ //Si el array tiene productos, los muestra.
+    //Muestro los productos en el DOM
     PRODUCTOS_EN_CARRITO.forEach(producto => {
 
         let div = document.createElement("div");
@@ -157,7 +148,50 @@ if(PRODUCTOS_EN_CARRITO.length == 0){
                                 <img src="${producto.img}" alt="Foto Prod">
                                 <h2>${producto.nombre}</h2>
                                 <p>$${producto.precio}</p>
-                                <button>Eliminar</button>
+                                <button id="btnEliminar">Eliminar</button>
+                            </div>
+                            
+        
+        `
+        prodEnCarrito.appendChild(div);
+    })
+}else{ //Si el array no tiene nada, lo informa.
+    let div = document.createElement("div");
+    div.className = "prodEnCarrito";
+    div.innerHTML = `
+                    <p>No hay elementos en el carrito</p>
+                    `
+
+prodEnCarrito.appendChild(div);
+}
+
+//Boton para borrar elementos del array
+
+
+const BTN = document.getElementById("btnEliminar"); //Lo vinculo con el boton, ahora es un nodo.
+
+console.log(PRODUCTOS_EN_CARRITO);
+
+//Funcion para borrar los elementos.
+
+BTN.onclick = () => {
+    //Borro un elemento del array
+    PRODUCTOS_EN_CARRITO.shift();
+    //Verifico por consola que se haya borrado
+    console.log(PRODUCTOS_EN_CARRITO);
+    //Vuelvo a printear el DOM sin el elemento borrado
+
+    PRODUCTOS_EN_CARRITO.forEach(producto => {
+
+        let div = document.createElement("div");
+        div.className = "prodEnCarrito"; //Aplico una Class
+        div.innerHTML = `
+                            
+                            <div>
+                                <img src="${producto.img}" alt="Foto Prod">
+                                <h2>${producto.nombre}</h2>
+                                <p>$${producto.precio}</p>
+                                <button id="btnEliminar">Eliminar</button>
                             </div>
                             
         
@@ -165,6 +199,3 @@ if(PRODUCTOS_EN_CARRITO.length == 0){
         prodEnCarrito.appendChild(div);
     })
 }
-
-
-
