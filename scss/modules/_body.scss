@@ -62,8 +62,23 @@ footer{
           border: 3px solid $colorSecundario;
         }
       }
-    }   
-    
+    }  
+    #mainCarrito{
+      #prodEnCarrito{
+        
+        div{
+            div{
+              border: 2px solid $colorSecundario;
+                
+          }
+        }
+      }
+    }
+    #mainPageFormularioContacto{
+      #formulario{
+        border-left: 2px solid white;
+      }
+    }    
 }
 
 .switch {

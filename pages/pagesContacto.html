@@ -65,7 +65,7 @@
           te va a contactar a la brevedad
         </p>
         <div id="formularioCuerpo">
-          <form>
+          <form action="" id="formularioContacto">
             <label for="nombre"></label>
             <input type="text" id="nombre" placeholder="Nombre" />
 
@@ -73,7 +73,7 @@
             <input type="text" id="apellido" placeholder="Apellido" />
 
             <label for="e-mail"></label>
-            <input type="text" id="e-mail" placeholder="E-mail" />
+            <input type="email" id="e-mail" placeholder="E-mail" />
             <fieldset>
               <legend>Tipo de telefono</legend>
               <label for="tipoContactoMovil"></label>
@@ -95,10 +95,10 @@
                 <option value="">02202</option>
               </select>
               <p>15</p>
-              <input type="text" placeholder="Numero de Celular" />
+              <input type="tel" placeholder="Numero de Celular" />
             </fieldset>
             <!-- BUTTON PARA ENVIAR EL FORMULARIO -->
-            <button type="submit">SOLICITAR CONTACTO</button>
+            <button id="btnSubmitForm" type="submit">SOLICITAR CONTACTO</button>
           </form>
         </div>
       </section>
@@ -108,6 +108,7 @@
       <p>Copyright © 2023 - Casa Viena</p>
       <p>Hecho por Farid Mohanna</p>
     </footer>
+    <script src="../js/formAJSON.js"></script>
     <script src="../js/funciones.js"></script>
   </body>
 </html>

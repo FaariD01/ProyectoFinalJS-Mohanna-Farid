@@ -1,4 +1,3 @@
-
 function comprar_producto(){
     let nombreProd = "Cemento Avellaneda 50KG"    
     let precio_incial_producto = 5000;
@@ -97,17 +96,23 @@ function comprar_producto(){
 
 }
 
-const botonModo = document.getElementById("botonModo");
+function modoOscuro(){
+    const botonModo = document.getElementById("botonModo");
 
-botonModo.addEventListener("click", ()=> {
-    document.body.classList.toggle("dark");
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("modo","dark");
-    }else {
-        localStorage.setItem("modo","claro");
-    }
-})
-
+    botonModo.addEventListener("click", ()=> {
+        document.body.classList.toggle("dark");
+        if(document.body.classList.contains("dark")){
+            localStorage.setItem("modo","dark");
+        }else {
+            localStorage.setItem("modo","claro");
+        }
+    })
+}
+modoOscuro();
+//FUNCION BORRAR TEXTO DEL DOM
+function clearHTML(){
+    prodEnCarrito.innerHTML = '';
+}
 //Carrito de compras
 
 //Creo el array
@@ -129,73 +134,72 @@ class Producto{
 const prod1 = new Producto ("../assets/fotosProductos/cemento.webp","Cemento Avellaneda", 5000);
 const prod2 = new Producto ("../assets/fotosProductos/cal_el_milagro.jpg","Cal El Milagro", 3000);
 
-//Los agrego al array
+//AGREGO LOS PRODUCTOS AL ARRAY
 
-PRODUCTOS_EN_CARRITO.push(prod1);
-PRODUCTOS_EN_CARRITO.push(prod2);
+PRODUCTOS_EN_CARRITO.push(prod1,prod2);
 
-//Verifico si el array tiene productos, para mostrarlos. Si no tiene muestra "No hay elementos en el carrito"
 
-if(PRODUCTOS_EN_CARRITO.length > 0){ //Si el array tiene productos, los muestra.
-    //Muestro los productos en el DOM
-    PRODUCTOS_EN_CARRITO.forEach(producto => {
 
+//FUNCION MOSTRAR CARRITO
+function printearCarrito(array){
+    
+    //Verifico si el array tiene productos, para mostrarlos. Si no tiene muestra "No hay elementos en el carrito"
+    if(array.length > 0){ //Si el array tiene productos, los muestra.
+        //Muestro los productos en el DOM
+        array.forEach(producto => {
+    
+            let div = document.createElement("div");
+            div.className = "prodEnCarrito"; //Aplico una Class
+            div.innerHTML = `
+                                
+                                <div>
+                                    <img src="${producto.img}" alt="Foto Prod">
+                                    <h2 id="${producto.id}">${producto.nombre}</h2>
+                                    <p>$${producto.precio}</p>
+                                    <button id="btnEliminar">Eliminar</button>
+                                </div>
+                                
+                                
+            
+            `
+            prodEnCarrito.appendChild(div);
+        })
+    }else{ //Si el array no tiene nada, lo informa.
         let div = document.createElement("div");
-        div.className = "prodEnCarrito"; //Aplico una Class
+        div.className = "prodEnCarrito";
         div.innerHTML = `
-                            
-                            <div>
-                                <img src="${producto.img}" alt="Foto Prod">
-                                <h2>${producto.nombre}</h2>
-                                <p>$${producto.precio}</p>
-                                <button id="btnEliminar">Eliminar</button>
-                            </div>
-                            
-        
-        `
-        prodEnCarrito.appendChild(div);
-    })
-}else{ //Si el array no tiene nada, lo informa.
-    let div = document.createElement("div");
-    div.className = "prodEnCarrito";
-    div.innerHTML = `
-                    <p>No hay elementos en el carrito</p>
-                    `
-
-prodEnCarrito.appendChild(div);
+                        <p>No hay elementos en el carrito</p>
+                        `
+    
+    prodEnCarrito.appendChild(div);
+    }
 }
+printearCarrito(PRODUCTOS_EN_CARRITO);
 
-//Boton para borrar elementos del array
+//FUNCION ELIMINAR PRODUCTOS DEL CARRITO
+function eliminarProductosEnCarrito(array){
+    //Boton para borrar elementos del array
+    const BTN = document.getElementById("btnEliminar"); //Lo vinculo con el boton, ahora es un nodo.
 
+    BTN.addEventListener("click", function(){
 
-const BTN = document.getElementById("btnEliminar"); //Lo vinculo con el boton, ahora es un nodo.
-
-console.log(PRODUCTOS_EN_CARRITO);
-
-//Funcion para borrar los elementos.
-
-BTN.onclick = () => {
-    //Borro un elemento del array
-    PRODUCTOS_EN_CARRITO.shift();
-    //Verifico por consola que se haya borrado
-    console.log(PRODUCTOS_EN_CARRITO);
-    //Vuelvo a printear el DOM sin el elemento borrado
-
-    PRODUCTOS_EN_CARRITO.forEach(producto => {
-
-        let div = document.createElement("div");
-        div.className = "prodEnCarrito"; //Aplico una Class
-        div.innerHTML = `
-                            
-                            <div>
-                                <img src="${producto.img}" alt="Foto Prod">
-                                <h2>${producto.nombre}</h2>
-                                <p>$${producto.precio}</p>
-                                <button id="btnEliminar">Eliminar</button>
-                            </div>
-                            
+        PRODUCTOS_EN_CARRITO.pop(); //Borro un elemento del carrito
         
-        `
-        prodEnCarrito.appendChild(div);
-    })
+        console.log(PRODUCTOS_EN_CARRITO); //Verifico por consola que se borre el producto
+        
+        clearHTML(); //Borro el contenido viejo
+
+        printearCarrito(PRODUCTOS_EN_CARRITO); //Muestro el carrito actualizado
+    });
 }
+eliminarProductosEnCarrito(PRODUCTOS_EN_CARRITO);
+
+
+
+
+
+
+
+
+
+

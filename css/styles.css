@@ -45,6 +45,12 @@ footer {
 .dark #infoProdPrimeraCol div img {
   border: 3px solid rgba(247, 149, 29, 0.4431372549);
 }
+.dark #mainCarrito #prodEnCarrito div div {
+  border: 2px solid rgba(247, 149, 29, 0.4431372549);
+}
+.dark #mainPageFormularioContacto #formulario {
+  border-left: 2px solid white;
+}
 
 .switch {
   position: relative;
