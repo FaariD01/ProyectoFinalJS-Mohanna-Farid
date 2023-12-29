@@ -22,9 +22,9 @@
         <a href="./pagesContacto.html" id="btnContacto">Contacto</a>
       </div>
       <div id="carritoYbuttonDarkMode">
-        <a href="/pages/pageCarritoCompra.html"
+        <a href="./pages/pageCarritoCompra.html"
           ><img
-            src="/assets/icons/carritoCompra.svg"
+            src="../assets/icons/carritoCompra.svg"
             alt="Foto Carrito Compra"
           />
           <span id="cuentaCarrito">0</span>
@@ -67,48 +67,52 @@
           Completá el formulario con tus datos y uno de nuestros representantes
           te va a contactar a la brevedad
         </p>
-        <div id="formularioCuerpo">
+        <section id="formularioCuerpo">
           <form action="" id="formulario">
-            <label for="nombre"></label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+            <div>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="nombre@gmail.com"
+              />
+            </div>
 
-            <label for="apellido"></label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              placeholder="Apellido"
-            />
+            <div>
+              <input
+                type="input"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
+              />
+            </div>
+            <div>
+              <input
+                type="input"
+                class="form-control"
+                id="apellido"
+                name="apellido"
+                placeholder="Apellido"
+              />
+            </div>
 
-            <label for="e-mail"></label>
-            <input type="email" id="e-mail" name="email" placeholder="E-mail" />
-            <fieldset>
-              <legend>Tipo de telefono</legend>
-              <label for="tipoContactoMovil"></label>
-              <select name="" id="tipoContactoMovil">
-                <option value="Celular">Celular</option>
-                <option value="Telefono Fijo">Telefono Fijo</option>
-              </select>
-            </fieldset>
-            <fieldset id="datosCelular">
-              <legend>Cod. de area</legend>
-              <label for="codArea"></label>
-              <select name="" id="codArea">
-                <option value="">011</option>
-                <option value="">0220</option>
-                <option value="">0221</option>
-                <option value="">0230</option>
-                <option value="">0237</option>
-                <option value="">0348</option>
-                <option value="">02202</option>
-              </select>
-              <p>15</p>
-              <input type="tel" placeholder="Numero de Celular" />
-            </fieldset>
-            <!-- BUTTON PARA ENVIAR EL FORMULARIO -->
-            <button id="btnSubmitForm" type="submit">SOLICITAR CONTACTO</button>
+            <div>
+              <input
+                type="tel"
+                class="form-control"
+                id="tel"
+                name="telefono"
+                placeholder="Teléfono"
+              />
+            </div>
+
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
           </form>
-        </div>
+        </section>
       </section>
     </main>
     <!-- FOOTER -->
@@ -116,7 +120,7 @@
       <p>Copyright © 2023 - Casa Viena</p>
       <p>Hecho por Farid Mohanna</p>
     </footer>
-    <script src="../js/formAJSON.js"></script>
+
     <script src="../js/funcionDarkMode.js"></script>
   </body>
 </html>

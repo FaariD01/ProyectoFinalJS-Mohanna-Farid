@@ -445,7 +445,6 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   border-left: 2px solid #2f2c33;
   margin: 0 2vh 5vh 2vh;
   border-radius: 3px;
@@ -453,37 +452,27 @@ footer p {
 #mainPageFormularioContacto #secFormulario h2 {
   font-size: 2.5rem;
   text-align: center;
-  margin: 0 2vh 0 2vh;
+  margin: 0 0 0 5vh;
 }
 #mainPageFormularioContacto #secFormulario p {
   text-align: center;
   font-size: 1.2rem;
+  margin-top: 5vh;
+}
+#mainPageFormularioContacto #secFormulario #formularioCuerpo {
+  margin-top: 10vh;
 }
 #mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario {
   display: flex;
   flex-direction: column;
-  width: 90vh;
-  margin-bottom: 7vh;
-}
-#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario input {
-  height: 3vh;
-  margin: 1vh 0 1vh 0;
-}
-#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario select {
-  width: 70vh;
-}
-#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario #datosCelular {
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  height: 7vh;
+  width: 90vh;
+  border: none;
 }
-#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario #datosCelular select {
-  width: 20vh;
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario div input {
   height: 3vh;
-}
-#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario #datosCelular input {
-  width: 25vh;
+  width: 30vh;
+  margin: 1vh 0 1vh 0;
 }
 #mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario button {
   margin-top: 2vh;
@@ -517,6 +506,7 @@ footer p {
   display: flex;
   align-items: center;
   height: 130px;
+  width: 500px;
   gap: 20px;
   margin-bottom: 5vh;
   border-radius: 10px;
