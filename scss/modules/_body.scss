@@ -49,12 +49,20 @@ footer{
         color: white;
       }
     }    
-    #materialesMezcla{
-      a{
+    #productos-container{
+      
         div{
           background-color: $colorSecundario;
+          button{
+            background-color: $colorPrincipal !important;
+            color: white;
+          }
+          a{
+            background-color: $colorPrincipal !important;
+            color: white !important;
+          }
         }
-      }
+      
     }
     #infoProdPrimeraCol{
       div{
@@ -64,15 +72,16 @@ footer{
       }
     }  
     #mainCarrito{
-      #prodEnCarrito{
-        
-        div{
-            div{
-              border: 2px solid $colorSecundario;
-                
-          }
+    
+      #cart-container{
+        .tarjeta-producto{
+          background-color: $colorSecundario;
+            button{
+              background-color: $colorPrincipal;
+            }
         }
       }
+
     }
     #mainPageFormularioContacto{
       #formulario{

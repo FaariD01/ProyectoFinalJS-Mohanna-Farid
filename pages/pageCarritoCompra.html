@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/matConstruArray.js"></script>
+    <script src="../js/carritoService.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
     <title>Casa Viena - Materiales para la Construccion</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/carritoService.js" defer></script>
   </head>
   <body>
     <!-- HEADER PAGINA PRINCIPAL -->
@@ -18,14 +22,15 @@
         <a href="../index.html" id="btnInicio">Inicio</a>
         <a href="./pagesProductos.html" id="btnProductos">Productos</a>
         <a href="../pages/pagesContacto.html" id="btnContacto">Contacto</a>
-        <a href="#" id="btnNosotros">¿Quienes Somos?</a>
       </div>
       <div id="carritoYbuttonDarkMode">
-        <a href="../pages/pageCarritoCompra.html"
+        <a href="/pages/pageCarritoCompra.html"
           ><img
-            src="../assets/icons/carritoCompra.svg"
+            src="/assets/icons/carritoCompra.svg"
             alt="Foto Carrito Compra"
-        /></a>
+          />
+          <span id="cuentaCarrito">0</span>
+        </a>
         <label class="switch">
           <input id="botonModo" type="checkbox" />
           <span class="slider round"></span>
@@ -37,12 +42,20 @@
       <!-- TITULO CARRITO -->
 
       <h2 id="tituloPageCarrito">CARRITO DE COMPRAS</h2>
-      <!-- SECTION CON LOS PRODUCTOS DEL CARRITO -->
-      <section id="prodEnCarrito"></section>
-      <!-- BUTTON PARA SEGUIR COMPRANDO -->
-      <div id="btnSeguirComprando">
-        <a href="./pagesProductos.html"><button>SEGUIR COMPRANDO</button></a>
-      </div>
+
+      <p id="carrito-vacio">
+        Ups! El carrito está vacío,
+        <a href="../pages/pagesProductos.html">elige algunos productos</a>
+      </p>
+
+      <section id="cart-container"></section>
+
+      <section id="totales">
+        <p>Total unidades: <span id="cantidad">0</span></p>
+        <p>Total precio: $<span id="precio">0</span></p>
+        <button disabled>Comprar</button>
+        <button id="reiniciar">Reiniciar</button>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -50,6 +63,6 @@
       <p>Copyright © 2023 - Casa Viena</p>
       <p>Hecho por Farid Mohanna</p>
     </footer>
-    <script src="../js/funciones.js"></script>
+    <script src="../js/funcionDarkMode.js"></script>
   </body>
 </html>

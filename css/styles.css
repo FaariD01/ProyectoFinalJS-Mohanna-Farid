@@ -39,14 +39,25 @@ footer {
 .dark #mainCompraProd #tituloProd {
   color: white;
 }
-.dark #materialesMezcla a div {
+.dark #productos-container div {
   background-color: rgba(247, 149, 29, 0.4431372549);
+}
+.dark #productos-container div button {
+  background-color: #2f2c33 !important;
+  color: white;
+}
+.dark #productos-container div a {
+  background-color: #2f2c33 !important;
+  color: white !important;
 }
 .dark #infoProdPrimeraCol div img {
   border: 3px solid rgba(247, 149, 29, 0.4431372549);
 }
-.dark #mainCarrito #prodEnCarrito div div {
-  border: 2px solid rgba(247, 149, 29, 0.4431372549);
+.dark #mainCarrito #cart-container .tarjeta-producto {
+  background-color: rgba(247, 149, 29, 0.4431372549);
+}
+.dark #mainCarrito #cart-container .tarjeta-producto button {
+  background-color: #2f2c33;
 }
 .dark #mainPageFormularioContacto #formulario {
   border-left: 2px solid white;
@@ -196,10 +207,22 @@ header #carritoYbuttonDarkMode {
   align-items: center;
 }
 header #carritoYbuttonDarkMode a {
+  text-decoration: none;
   margin-right: 2vh;
 }
 header #carritoYbuttonDarkMode a img {
   width: 5vh;
+}
+header #carritoYbuttonDarkMode a #cuentaCarrito {
+  background-color: rgba(247, 149, 29, 0.4431372549);
+  border-radius: 100%;
+  display: inline-block;
+  width: 20px;
+  line-height: 20px;
+  aspect-ratio: 1;
+  text-align: center;
+  position: absolute;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 footer {
@@ -254,43 +277,60 @@ footer p {
   border: solid rgba(247, 149, 29, 0.4431372549) 3px;
 }
 
-#mainMatConstru #tituloPagMatConstru {
+#mainProductos #tituloPagProductos {
   text-align: center;
   font-weight: 300;
 }
-#mainMatConstru #materialesMezcla {
+#mainProductos #productos-container {
   margin-top: 10vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
-#mainMatConstru #materialesMezcla a {
-  text-decoration: none;
-  color: #2f2c33;
-}
-#mainMatConstru #materialesMezcla a div {
+#mainProductos #productos-container div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3vh 0 3vh 0;
-  width: 27vh;
-  height: 37vh;
+  width: 29vh;
+  height: 45vh;
   border-radius: 2vh;
   box-shadow: 10px 10px 20px;
   margin: 5vh 10vh 5vh 10vh;
+  transition: 200ms;
 }
-#mainMatConstru #materialesMezcla a div h2 {
+#mainProductos #productos-container div:hover {
+  translate: 0 -10px;
+}
+#mainProductos #productos-container div h2 {
   font-weight: 400;
   text-align: center;
 }
-#mainMatConstru #materialesMezcla a div img {
+#mainProductos #productos-container div img {
   width: 22vh;
+  height: 20vh;
 }
-#mainMatConstru #materialesMezcla a div p {
+#mainProductos #productos-container div p {
   font-size: 1.4rem;
   padding-bottom: 1vh;
+}
+#mainProductos #productos-container div a {
+  text-decoration: none;
+  color: #2f2c33;
+  padding: 1vh 1vh 1vh 1vh;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+  background-color: rgba(247, 149, 29, 0.4431372549);
+}
+#mainProductos #productos-container div button {
+  background-color: rgba(247, 149, 29, 0.4431372549);
+  border: none;
+  border-radius: 5px;
+  padding: 1vh 1vh 1vh 1vh;
+  justify-content: center;
+  cursor: pointer;
 }
 
 #mainCompraProd #tituloProd {
@@ -401,7 +441,7 @@ footer p {
 #mainPageFormularioContacto #infoContacto div img {
   width: 5vh;
 }
-#mainPageFormularioContacto #formulario {
+#mainPageFormularioContacto #secFormulario {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -410,42 +450,42 @@ footer p {
   margin: 0 2vh 5vh 2vh;
   border-radius: 3px;
 }
-#mainPageFormularioContacto #formulario h2 {
+#mainPageFormularioContacto #secFormulario h2 {
   font-size: 2.5rem;
   text-align: center;
   margin: 0 2vh 0 2vh;
 }
-#mainPageFormularioContacto #formulario p {
+#mainPageFormularioContacto #secFormulario p {
   text-align: center;
   font-size: 1.2rem;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario {
   display: flex;
   flex-direction: column;
   width: 90vh;
   margin-bottom: 7vh;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form input {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario input {
   height: 3vh;
   margin: 1vh 0 1vh 0;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form select {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario select {
   width: 70vh;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form #datosCelular {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario #datosCelular {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 7vh;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form #datosCelular select {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario #datosCelular select {
   width: 20vh;
   height: 3vh;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form #datosCelular input {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario #datosCelular input {
   width: 25vh;
 }
-#mainPageFormularioContacto #formulario #formularioCuerpo form button {
+#mainPageFormularioContacto #secFormulario #formularioCuerpo #formulario button {
   margin-top: 2vh;
   height: 5vh;
   width: 20vh;
@@ -466,29 +506,52 @@ footer p {
   font-weight: 400;
   justify-content: start;
 }
-#mainCarrito #btnSeguirComprando {
-  align-items: center;
+#mainCarrito #carrito-vacio {
+  text-align: center;
+}
+#mainCarrito #cart-container {
+  max-width: 500px;
   margin-top: 10vh;
 }
-#mainCarrito #btnSeguirComprando button {
+#mainCarrito #cart-container .tarjeta-producto {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  gap: 20px;
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px;
+}
+#mainCarrito #cart-container .tarjeta-producto img {
+  height: 90%;
+  margin-left: 2vh;
+}
+#mainCarrito #cart-container .tarjeta-producto h3 {
+  width: 130px;
+}
+#mainCarrito #cart-container .tarjeta-producto div {
+  background-color: var(--color-acento-claro);
+  padding: 3px;
+  border-radius: 5px;
+}
+#mainCarrito #cart-container .tarjeta-producto button {
   background-color: rgba(247, 149, 29, 0.4431372549);
   border: none;
   border-radius: 5px;
-  height: 4vh;
-  width: 20vh;
-  box-shadow: 2px 5px 10px #2f2c33;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  color: white;
 }
-#mainCarrito #prodEnCarrito div div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #2f2c33;
-  margin-bottom: 2vh;
-  padding: 1vh 1vh 1vh 1vh;
-  border-radius: 10px;
+#mainCarrito button {
+  background-color: rgba(247, 149, 29, 0.4431372549);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  color: white;
 }
-#mainCarrito #prodEnCarrito div div img {
-  width: 15vh;
+#mainCarrito .escondido {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

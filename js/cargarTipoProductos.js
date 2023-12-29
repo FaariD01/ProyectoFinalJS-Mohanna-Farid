@@ -9,13 +9,12 @@ class TipoProductos{
 
 
 const MATERIALES_PARA_CONSTRUCCION = new TipoProductos("../pages/pagesMatConstru.html","../assets/fotosTiposMateriales/materialesConstru.jpg", "MATERIALES PARA LA CONSTRUCCION");
-const PLOMERIA = new TipoProductos("#","../assets/fotosTiposMateriales/plomeria.jpg", "PLOMERIA");
-const PINTURA = new TipoProductos("#","../assets/fotosTiposMateriales/pintura.jpg", "PINTURA");
-const FERRETERIA = new TipoProductos("#","../assets/fotosTiposMateriales/ferreteria.jpg", "FERRETERIA");
-const CONSTRUCCION_EN_SECO = new TipoProductos("#","../assets/fotosTiposMateriales/construEnSeco.jpg", "CONSTRUCCION EN SECO");
+const PLOMERIA = new TipoProductos("../pages/pagesMatPlomeria.html","../assets/fotosTiposMateriales/plomeria.jpg", "PLOMERIA");
+const PINTURA = new TipoProductos("../pages/pagesMatPintura.html","../assets/fotosTiposMateriales/pintura.jpg", "PINTURA");
 
 
-const ARRAY_TIPO_PRODUCTOS = [MATERIALES_PARA_CONSTRUCCION, PLOMERIA, PINTURA, FERRETERIA,CONSTRUCCION_EN_SECO]
+
+const ARRAY_TIPO_PRODUCTOS = [MATERIALES_PARA_CONSTRUCCION, PLOMERIA, PINTURA]
 
 
 ARRAY_TIPO_PRODUCTOS.forEach(producto =>{

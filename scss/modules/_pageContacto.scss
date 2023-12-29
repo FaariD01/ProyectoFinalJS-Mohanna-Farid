@@ -23,7 +23,7 @@
         }
     }
 
-    #formulario{
+    #secFormulario{
 
         display: flex;
         flex-direction: column;
@@ -44,7 +44,7 @@
             font-size: 1.2rem ;
         }
         #formularioCuerpo{
-            form{
+            #formulario{
                 display: flex;
                 flex-direction: column;
                 width: 90vh;
