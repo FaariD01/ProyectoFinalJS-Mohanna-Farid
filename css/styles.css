@@ -483,6 +483,7 @@ footer p {
   border: none;
   border-radius: 20px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 #mainCarrito {

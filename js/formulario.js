@@ -1,31 +1,25 @@
-const formulario = document.getElementById("formulario");
+
+
+const formulario = document.getElementById('formulario');
+
+const formDatosArray = [];
+
+
+/*Funcion para extraer todos los datos del formulario y convertirlos en formato JSON */
 
 const procesaTodo = (event) => {
-    /*Para una accion predeterminada del evento*/
-    event.preventDefault();
-    /*constructor que crea un objeto de tipo FormData */
-   const datos = new FormData(event.target);
-   
-    /* El método Object.fromEntries() transforma una lista de pares con [clave-valor] en un objeto.*/
-   const datosCompletos = Object.fromEntries(datos.entries());
-   console.log(JSON.stringify(datosCompletos));
-   
-   localStorage.setItem("datosFormulario",JSON.stringify([datosCompletos]));
+ /*Para una accion predeterminada del evento*/
+ event.preventDefault();
+ /*constructor que crea un objeto de tipo FormData */
+const datos = new FormData(event.target);
 
-   }
+ /* El método Object.fromEntries() transforma una lista de pares con [clave-valor] en un objeto.*/
+const datosCompletos = Object.fromEntries(datos.entries());
 
-   const procesaDatos = (event) => {
-    /*Para una accion predeterminada del evento*/
-    event.preventDefault();
+formDatosArray.push(datosCompletos);
 
-    /*constructor que crea un objeto de tipo FormData */
-    const datos = new FormData(event.target);
-
-    /*El metodo get retorna el valor associado con la clave del objeto FormData */
-    const correo = datos.get('email');   
-    console.log({correo});
+localStorage.setItem("formDatosArray", JSON.stringify(formDatosArray));
 
 }
 
-
-formulario.addEventListener('submit', procesaTodo());
+formulario.addEventListener('submit', procesaTodo);
