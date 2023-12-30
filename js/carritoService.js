@@ -74,3 +74,15 @@ function reiniciarCarrito(){
 
 
 actualizarNumeroCarrito();
+
+const btnComprar = document.getElementById("comprar");
+
+btnComprar.onclick = () =>{
+
+  swal({
+    
+    text: "OJALA FUNCIONARA :)",
+    icon: "error",
+  });
+
+}

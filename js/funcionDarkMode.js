@@ -11,5 +11,3 @@ function modoOscuro(){
     })
 }
 modoOscuro();
-
-swal("Hello world!");

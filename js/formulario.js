@@ -1,5 +1,6 @@
 
 
+
 const formulario = document.getElementById('formulario');
 
 const formDatosArray = [];
@@ -20,6 +21,12 @@ formDatosArray.push(datosCompletos);
 
 localStorage.setItem("formDatosArray", JSON.stringify(formDatosArray));
 
-}
+    swal({
+        title: "Formulario enviado correctamente",
+        icon: "success",
+      });
+    
+    }
+
 
 formulario.addEventListener('submit', procesaTodo);
