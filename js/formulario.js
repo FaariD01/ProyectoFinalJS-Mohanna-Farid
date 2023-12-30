@@ -1,6 +1,4 @@
 
-
-
 const formulario = document.getElementById('formulario');
 
 const formDatosArray = [];
@@ -9,7 +7,7 @@ const formDatosArray = [];
 // Funcion para extraer todos los datos del formulario y convertirlos en formato JSON 
 
 const procesaTodo = (event) => {
- /*Para una accion predeterminada del evento*/
+ // Para una accion predeterminada del evento
  event.preventDefault();
  // constructor que crea un objeto de tipo FormData 
 const datos = new FormData(event.target);

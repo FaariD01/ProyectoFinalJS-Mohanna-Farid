@@ -1,6 +1,6 @@
 const cuentaCarritoElement = document.getElementById("cuentaCarrito");
 
-/** Toma un objeto producto o un objeto con al menos un ID y lo agrega al carrito */
+// Toma un objeto producto o un objeto con al menos un ID y lo agrega al carrito
 function agregarAlCarrito(producto){
   //Reviso si el producto está en el carrito.
   let memoria = JSON.parse(localStorage.getItem("materialesConstruccion"));
