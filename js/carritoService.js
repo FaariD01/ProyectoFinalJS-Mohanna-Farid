@@ -32,7 +32,7 @@ function agregarAlCarrito(producto){
   }
 }
 
-/** Resta una unidad de un producto del carrito */
+// Resta una unidad de un producto del carrito
 function restarAlCarrito(producto){
   let memoria = JSON.parse(localStorage.getItem("materialesConstruccion"));
   let cantidadProductoFinal = 0;
@@ -48,14 +48,14 @@ function restarAlCarrito(producto){
   return cantidadProductoFinal;
 }
 
-/** Agrega cantidad a un objeto producto */
+// Agrega cantidad a un objeto producto
 function getNuevoProductoParaMemoria(producto){
   const nuevoProducto = producto;
   nuevoProducto.cantidad = 1;
   return nuevoProducto;
 }
 
-/** Actualiza el número del carrito del header */
+// Actualiza el número del carrito del header
 function actualizarNumeroCarrito(){
   let cuenta = 0;
   const memoria = JSON.parse(localStorage.getItem("materialesConstruccion"));
@@ -66,7 +66,7 @@ function actualizarNumeroCarrito(){
   cuentaCarritoElement.innerText = 0;
 }
 
-/** Reinicia el carrito */
+// Reinicia el carrito 
 function reiniciarCarrito(){
   localStorage.removeItem("materialesConstruccion");
   actualizarNumeroCarrito();
